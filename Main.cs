@@ -140,10 +140,11 @@ namespace Feature_Matching
                 mask.SetTo(new MCvScalar(255));
                 Features2DToolbox.VoteForUniqueness(matches, uniquenessThreshold, mask);
 
+                /*
                 // Show Process
                 Features2DToolbox.DrawMatches(imgTemplate, templateKeyPoints, imgScene, sceneKeyPoints, matches, img, new MCvScalar(255, 0, 0), new MCvScalar(0, 0, 255), mask);
                 pictureBox1.Image = img.ToBitmap();
-                MessageBox.Show("Feature Matches");
+                MessageBox.Show("Feature Matches");*/
 
                 int nonZeroCount = CvInvoke.CountNonZero(mask);
                 if (nonZeroCount >= 4)
